@@ -1,0 +1,264 @@
+.dropdown {
+    background-color: black;
+    color: white;
+    position: absolute;  /* o fixed si quieres que quede pegado a la ventana */
+    top: 50px;
+    left: 20px;
+    z-index: 1050;} /* asegúrate que esté por encima de otros elementos */
+    .menu-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Asegura que el menú esté sobre las imágenes */
+}
+
+.dropdown {
+    text-align: center;
+}
+
+.form-overlay{
+background-image: url(imagenes/a.gif); 
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+text-shadow: #000000;
+color: #00ffcc;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: medium;
+}
+
+.form-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8); /* blanco semi-transparente */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 100%;
+}
+.carousel {
+  position: relative; /* importante para que el formulario se posicione relativo a esto */
+}
+.footer{text-align: center;
+background-color: black;
+ padding: 1rem;
+  margin: 0;
+p{color: aliceblue;}
+background-image: url(imagenes/fiesta.gif);
+
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+.mapa{width: 100%;
+height: 200px;
+text-align: center;
+align-items: center;
+background-position: center;
+background-attachment: scroll;
+}
+
+body {
+  margin: 0;
+  background: #f0f0f0;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f0f0f0;
+  font-family: sans-serif;
+  background-color: black;
+
+  
+}
+
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  background-image: url(imagenes/fiesta.gif);
+}
+
+/* Contenedor principal */
+.galeria {
+  padding: 2rem 1rem;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* Galería tipo Masonry (orgánica) */
+.efectos-gallery {
+  column-count: 4;
+  column-gap: 1rem;
+}
+
+/* Imágenes y videos fluidos */
+.efectos-gallery img,
+.efectos-gallery video {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  break-inside: avoid;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* 🎯 Agrega este borde */
+  border: 4px solid white; /* Cambia el color o grosor si lo deseas */
+  cursor: pointer;
+}
+.efectos-gallery img:hover,
+.efectos-gallery video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: #000000; /* Cambia el color al hacer hover */
+}
+
+/* Hover: resalta visualmente */
+.efectos-gallery img:hover,
+.efectos-gallery video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+  .efectos-gallery {
+    column-count: 3;
+  }
+}
+@media (max-width: 768px) {
+  .efectos-gallery {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .efectos-gallery {
+    column-count: 1;
+  }
+}
+.sobre-la-tarea{text-align: center;
+  background-color: #f0f0f0;
+  font-family: cursive;
+  background-image: url(imagenes/fiesta2.gif);
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.custom-dropdown {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+}
+
+.custom-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #555;
+}
+
+.custom-menu {
+  animation: fadeIn 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.custom-menu .dropdown-item {
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.custom-menu .dropdown-item:hover {
+  background-color: #333;
+  color: #00ffcc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.lightbox-content {
+  max-width: 95vw;
+  max-height: 90vh;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.05); /* pequeño zoom */
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+
+.lightbox video {
+  background-color: black;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.lightbox.show {
+  display: flex;
+}
+.zoomable {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.zoomable.zoomed {
+  transform: scale(1.5);
+  z-index: 1000;
+  position: relative;
+  cursor: zoom-out;
+}
